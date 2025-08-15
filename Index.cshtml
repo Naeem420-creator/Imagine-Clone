@@ -1,0 +1,759 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imagine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body style="background-color: rgb(255, 255, 255);">
+
+    <!-- Header -->
+    <header style="position:fixed;top:0;left:0;width:100%;z-index:999;background:#fff;padding:15px 40px;height:70px;box-shadow:0 2px 10px rgba(0,0,0,0.08);display:flex;justify-content:space-between;align-items:center;box-sizing:border-box;">
+
+        <!-- Left side: Logo -->
+        <div style="font-size:24px;font-weight:bold;margin:0;">imagine</div>
+
+        <!-- Right side: Navigation -->
+        <nav style="font-family:sans-serif;">
+            <ul style="list-style:none;margin:0;padding:0;display:flex;align-items:center;flex-wrap:nowrap;gap:10px;">
+
+                <li style="margin:0 15px;position:relative;">
+                    <a href="#home" style="color:black;text-decoration:none;padding:8px 12px;display:inline-block;" onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';">Home</a>
+                </li>
+
+                <li style="margin:0 15px;position:relative;">
+                    <a href="#features" style="color:black;text-decoration:none;padding:8px 12px;display:inline-block;" onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';">Features</a>
+                </li>
+
+                <!-- About Us dropdown -->
+                <li style="margin:0 15px;position:relative;" onmouseover="showDropdown('aboutDropdown');" onmouseout="hideDropdown('aboutDropdown');">
+                    <a href="#about-us" style="color:black;text-decoration:none;padding:8px 12px;display:inline-block;" onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';">About Us ▼</a>
+
+                    <!-- Dropdown -->
+                    <ul id="aboutDropdown" style="display:none;position:absolute;top:35px;left:0;background:white;list-style:none;margin:0;padding:8px 0;box-shadow:0 2px 8px rgba(0,0,0,0.1);border:1px solid #eee;min-width:200px;">
+                        <li>
+                            <a href="#free-templates" style="color:blue;text-decoration:none;padding:8px 16px;display:block;" onmouseover="this.style.backgroundColor='#f5f5f5';" onmouseout="this.style.backgroundColor='white';">More Free Templates</a>
+                        </li>
+                        <li>
+                            <a href="#our-team" style="color:black;text-decoration:none;padding:8px 16px;display:block;" onmouseover="this.style.color='blue';this.style.backgroundColor='#f5f5f5';" onmouseout="this.style.color='black';this.style.backgroundColor='white';">Our Team</a>
+                        </li>
+
+                        <!-- More Links submenu -->
+                        <li style="position:relative;" onmouseover="showDropdown('moreLinksDropdown');" onmouseout="hideDropdown('moreLinksDropdown');">
+                            <a href="#" style="color:black;text-decoration:none;padding:8px 16px;display:block;" onmouseover="this.style.color='blue';this.style.backgroundColor='#f5f5f5';" onmouseout="this.style.color='black';this.style.backgroundColor='white';">More Links ▸</a>
+
+                            <ul id="moreLinksDropdown" style="display:none;position:absolute;top:0;left:200px;background:white;list-style:none;margin:0;padding:8px 0;box-shadow:0 2px 8px rgba(0,0,0,0.1);border:1px solid #eee;min-width:180px;">
+                                <li>
+                                    <a href="#menu1" style="color:black;text-decoration:none;padding:8px 16px;display:block;" onmouseover="this.style.color='blue';this.style.backgroundColor='#f5f5f5';" onmouseout="this.style.color='black';this.style.backgroundColor='white';">Menu One</a>
+                                </li>
+                                <li>
+                                    <a href="#menu2" style="color:black;text-decoration:none;padding:8px 16px;display:block;" onmouseover="this.style.color='blue';this.style.backgroundColor='#f5f5f5';" onmouseout="this.style.color='black';this.style.backgroundColor='white';">Menu Two</a>
+                                </li>
+                                <li>
+                                    <a href="#menu3" style="color:black;text-decoration:none;padding:8px 16px;display:block;" onmouseover="this.style.color='blue';this.style.backgroundColor='#f5f5f5';" onmouseout="this.style.color='black';this.style.backgroundColor='white';">Menu Three</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li style="margin:0 15px;">
+                    <a href="#testimonials" style="color:black;text-decoration:none;padding:8px 12px;" onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';">Testimonials</a>
+                </li>
+                <li style="margin:0 15px;">
+                    <a href="#blog" style="color:black;text-decoration:none;padding:8px 12px;" onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';">Blog</a>
+                </li>
+                <li style="margin:0 15px;">
+                    <a href="#contact" style="color:black;text-decoration:none;padding:8px 12px;" onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Hero Section-->
+    <section id="home" style="display:flex; align-items:center; justify-content:space-between; padding:50px 10%; flex-wrap:wrap;">
+        <div style="max-width:500px;">
+            <h1 style="font-size:48px; margin-bottom:20px;">Make Your Business<br>More Profitable</h1>
+            <p style="color:#666; font-size:16px; margin-bottom:30px; line-height:1.5;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam assumenda ea quo cupiditate facere deleniti fuga officia.
+            </p>
+            <a href="#" style="background:#4e7fff; color:white; padding:12px 25px; border-radius:25px; text-decoration:none; font-weight:500; display:inline-block;" onmouseover="this.style.background='#345fd9'" onmouseout="this.style.background='#4e7fff'">
+                Get Started
+            </a>
+        </div>
+        <img src="~/undraw_investing_7u74.svg" alt="Business Growth Illustration" style="max-width:350px; height:500px; margin-top:0; display:inline-block; vertical-align:middle;">
+
+    </section>
+
+    <!--Features-->
+    <section id="features" style="text-align:center; padding:50px 20px; font-family:Arial, sans-serif; margin:0; background:#fff; color:#333;">
+        <h2 id="features-heading" style="font-size:2rem; font-weight:bold; margin-bottom:10px; opacity:0; transform:translateY(50px); transition:all 0.6s ease;">
+            Imagine Features
+        </h2>
+        <p id="features-text" style="max-width:600px; margin:0 auto 40px; color:#777; opacity:0; transform:translateY(50px); transition:all 0.6s ease;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuga quos quaerat sapiente nam, id vero.
+        </p>
+
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:30px; max-width:1100px; margin:0 auto;">
+
+            <!-- Reusable Feature Card -->
+            <div class="feature-card" style="background:#f8f9fa; padding:30px 20px 20px; border-radius:8px; position:relative; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.05); opacity:0; transform:translateY(50px); transition:all 0.6s ease;">
+                <div style="background:#2d8cff; color:white; font-size:20px; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; position:absolute; top:-25px; left:50%; transform:translateX(-50%); box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+                    <i class="fas fa-sync"></i>
+                </div>
+                <h3 style="margin-top:20px; font-size:1.1rem; font-weight:600;">Marketing Consulting</h3>
+                <p style="font-size:0.9rem; color:#777; margin:10px 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                <a href="#" style="text-decoration:none; color:#2d8cff; font-weight:500;">Learn More</a>
+            </div>
+
+            <div class="feature-card" style="background:#f8f9fa; padding:30px 20px 20px; border-radius:8px; position:relative; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.05); opacity:0; transform:translateY(50px); transition:all 0.6s ease;">
+                <div style="background:#2d8cff; color:white; font-size:20px; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; position:absolute; top:-25px; left:50%; transform:translateX(-50%); box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h3 style="margin-top:20px; font-size:1.1rem; font-weight:600;">Market Analysis</h3>
+                <p style="font-size:0.9rem; color:#777; margin:10px 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                <a href="#" style="text-decoration:none; color:#2d8cff; font-weight:500;">Learn More</a>
+            </div>
+
+            <div class="feature-card" style="background:#f8f9fa; padding:30px 20px 20px; border-radius:8px; position:relative; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.05); opacity:0; transform:translateY(50px); transition:all 0.6s ease;">
+                <div style="background:#2d8cff; color:white; font-size:20px; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; position:absolute; top:-25px; left:50%; transform:translateX(-50%); box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <h3 style="margin-top:20px; font-size:1.1rem; font-weight:600;">Easy Purchase</h3>
+                <p style="font-size:0.9rem; color:#777; margin:10px 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                <a href="#" style="text-decoration:none; color:#2d8cff; font-weight:500;">Learn More</a>
+            </div>
+
+            <div class="feature-card" style="background:#f8f9fa; padding:30px 20px 20px; border-radius:8px; position:relative; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.05); opacity:0; transform:translateY(50px); transition:all 0.6s ease;">
+                <div style="background:#2d8cff; color:white; font-size:20px; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; position:absolute; top:-25px; left:50%; transform:translateX(-50%); box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+                    <i class="fas fa-sync"></i>
+                </div>
+                <h3 style="margin-top:20px; font-size:1.1rem; font-weight:600;">Free Updates</h3>
+                <p style="font-size:0.9rem; color:#777; margin:10px 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                <a href="#" style="text-decoration:none; color:#2d8cff; font-weight:500;">Learn More</a>
+            </div>
+
+            <div class="feature-card" style="background:#f8f9fa; padding:30px 20px 20px; border-radius:8px; position:relative; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.05); opacity:0; transform:translateY(50px); transition:all 0.6s ease;">
+                <div style="background:#2d8cff; color:white; font-size:20px; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; position:absolute; top:-25px; left:50%; transform:translateX(-50%); box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+                    <i class="fas fa-smile"></i>
+                </div>
+                <h3 style="margin-top:20px; font-size:1.1rem; font-weight:600;">100% Satisfied</h3>
+                <p style="font-size:0.9rem; color:#777; margin:10px 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                <a href="#" style="text-decoration:none; color:#2d8cff; font-weight:500;">Learn More</a>
+            </div>
+
+            <div class="feature-card" style="background:#f8f9fa; padding:30px 20px 20px; border-radius:8px; position:relative; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,0.05); opacity:0; transform:translateY(50px); transition:all 0.6s ease;">
+                <div style="background:#2d8cff; color:white; font-size:20px; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; position:absolute; top:-25px; left:50%; transform:translateX(-50%); box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+                    <i class="fas fa-plug"></i>
+                </div>
+                <h3 style="margin-top:20px; font-size:1.1rem; font-weight:600;">Easy Plugin</h3>
+                <p style="font-size:0.9rem; color:#777; margin:10px 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                <a href="#" style="text-decoration:none; color:#2d8cff; font-weight:500;">Learn More</a>
+            </div>
+
+        </div>
+
+        <!-- Feedbacks -->
+        <!-- Feedback Section 1 -->
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:50px; padding:60px 10%; flex-wrap:wrap;">
+            <img src="~/undraw_gift_card_6ekc.svg" alt="Illustration"
+                 style="flex:1; max-width:450px; min-width:300px; transform:translateX(-100px); opacity:0; transition:all 1s ease;"
+                 id="feedback-img-1">
+            <div style="flex:1; min-width:300px;">
+                <h2 style="font-size:2rem; font-weight:bold; margin-bottom:15px;">Communicate and gather feedback</h2>
+                <p style="color:#777; margin-bottom:25px; line-height:1.5;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem neque nisi architecto autem molestias corrupti officia veniam.
+                </p>
+                <div style="display:flex; align-items:center; background:#fff; padding:15px 20px; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.08); max-width:400px;">
+                    <img src="~/person_4.jpg.webp" alt="Grey Simpson" style="width:55px; height:55px; border-radius:50%; object-fit:cover; margin-right:15px;">
+                    <div>
+                        <strong style="display:block; font-size:1rem; margin-bottom:3px;">Grey Simpson</strong>
+                        <span style="font-size:0.9rem; color:#555;">Co-Founder, XYZ Inc.</span>
+                        <div style="margin-top:10px; font-size:0.9rem; color:#555; border-left:4px solid #007bff; padding-left:10px; font-style:italic;">
+                            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ducimus vitae ipsa asperiores inventore aperiam iure?”
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Section 2 -->
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:50px; padding:60px 10%; flex-wrap:wrap; flex-direction:row-reverse;">
+            <img src="~/undraw_metrics_gtu7.svg" alt="Illustration"
+                 style="flex:1; max-width:450px; min-width:300px; transform:translateX(100px); opacity:0; transition:all 1s ease;"
+                 id="feedback-img-2">
+            <div style="flex:1; min-width:300px;">
+                <h2 style="font-size:2rem; font-weight:bold; margin-bottom:15px;">Communicate and gather feedback</h2>
+                <p style="color:#777; margin-bottom:25px; line-height:1.5;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem neque nisi architecto autem molestias corrupti officia veniam.
+                </p>
+                <div style="display:flex; align-items:center; background:#fff; padding:15px 20px; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.08); max-width:400px;">
+                    <img src="~/person_1.jpg.webp" alt="Kimberly Gush" style="width:55px; height:55px; border-radius:50%; object-fit:cover; margin-right:15px;">
+                    <div>
+                        <strong style="display:block; font-size:1rem; margin-bottom:3px;">Kimberly Gush</strong>
+                        <span style="font-size:0.9rem; color:#555;">Co-Founder, XYZ Inc.</span>
+                        <div style="margin-top:10px; font-size:0.9rem; color:#555; border-left:4px solid #007bff; padding-left:10px; font-style:italic;">
+                            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ducimus vitae ipsa asperiores inventore aperiam iure?”
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- About Us -->
+    <section id="about-us" style="background-color:#f9f9f9; padding:60px 20px; font-family:Arial, sans-serif; text-align:center;">
+        <h1 style="font-size:2.5rem; margin-bottom:50px;">About Us</h1>
+
+        <div style="display:flex; align-items:center; justify-content:center; gap:50px; flex-wrap:wrap;">
+
+            <!-- Left Image with animation -->
+            <img id="about-img" src="~/undraw_bookmarks_r6up.svg" alt="Business Growth Illustration"
+                 style="max-width:450px; width:100%; opacity:0; transform:translateX(-100px); transition:all 1s ease-out;">
+
+            <!-- Right Text -->
+            <div style="max-width:500px; text-align:left;">
+                <h2 style="font-size:1.8rem; margin-bottom:15px;">Our Mission</h2>
+                <p style="color:#666; margin-bottom:20px; line-height:1.6;">
+                    Eos cumque optio dolores excepturi rerum temporibus magni recusandae eveniet,
+                    totam omnis consectetur maxime quibusdam expedita dolorem dolor nobis dicta
+                    labore quaerat esse magnam unde, aperiam delectus! At maiores, itaque.
+                </p>
+                <ul style="list-style:none; padding:0; margin:0 0 30px;">
+                    <li style="margin-bottom:10px;"><span style="color:#28a745; margin-right:8px;">✔</span>Laborum enim quasi at modi</li>
+                    <li style="margin-bottom:10px;"><span style="color:#28a745; margin-right:8px;">✔</span>Ad at tempore</li>
+                    <li style="margin-bottom:10px;"><span style="color:#28a745; margin-right:8px;">✔</span>Labore quaerat esse</li>
+                </ul>
+                <a href="#" style="background:#007bff; color:white; padding:12px 25px; text-decoration:none; border-radius:25px; display:inline-block; font-size:1rem; box-shadow:0 5px 15px rgba(0,123,255,0.3);">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="our-team" style="text-align:center; padding:60px 20px; background-color:#fff;">
+        <h2 style="font-size:2rem; margin-bottom:10px;">Our Team</h2>
+        <p style="color:#777; max-width:600px; margin:0 auto 40px;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:30px; max-width:1100px; margin:0 auto;">
+
+            <!-- MEMBER-1 -->
+            <div class="member-card" style="text-align:center; opacity:0; transform:translateY(30px); transition:all 0.6s ease;">
+                <div style="position:relative; display:inline-block; overflow:hidden; border-radius:5px; max-width:250px;"
+                     onmouseover="this.querySelector('.overlay').style.height='50px'"
+                     onmouseout="this.querySelector('.overlay').style.height='0'">
+                    <img src="~/person_1.jpg (1).webp" alt="Cloe Marena" style="width:100%; display:block;">
+                    <div class="overlay" style="position:absolute; bottom:0; left:0; right:0; background-color:rgba(0,123,255,0.9); height:0; overflow:hidden; display:flex; justify-content:center; align-items:center; gap:20px; transition:height 0.3s ease;">
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">📘</a>
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">🐦</a>
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">📸</a>
+                    </div>
+                </div>
+                <h3 style="margin:15px 0 5px; font-size:1.1rem;">Cloe Marena</h3>
+                <span style="display:block; font-size:0.9rem; color:#007bff; margin-bottom:10px;">President</span>
+                <p style="font-size:0.85rem; color:#666; text-align:left; max-width:250px; margin:0 auto;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum excepturi corporis qui doloribus perspiciatis ipsa modi accusantium repellat.
+                </p>
+            </div>
+
+            <!-- MEMBER-2 -->
+            <div class="member-card" style="text-align:center; opacity:0; transform:translateY(30px); transition:all 0.6s ease;">
+                <div style="position:relative; display:inline-block; overflow:hidden; border-radius:5px; max-width:250px;"
+                     onmouseover="this.querySelector('.overlay').style.height='50px'"
+                     onmouseout="this.querySelector('.overlay').style.height='0'">
+                    <img src="~/person_2.jpg.webp" alt="John Rooster" style="width:100%; display:block;">
+                    <div class="overlay" style="position:absolute; bottom:0; left:0; right:0; background-color:rgba(0,123,255,0.9); height:0; overflow:hidden; display:flex; justify-content:center; align-items:center; gap:20px; transition:height 0.3s ease;">
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">📘</a>
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">🐦</a>
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">📸</a>
+                    </div>
+                </div>
+                <h3 style="margin:15px 0 5px; font-size:1.1rem;">John Rooster</h3>
+                <span style="display:block; font-size:0.9rem; color:#007bff; margin-bottom:10px;">Marketing</span>
+                <p style="font-size:0.85rem; color:#666; text-align:left; max-width:250px; margin:0 auto;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum excepturi corporis qui doloribus perspiciatis ipsa modi accusantium repellat.
+                </p>
+            </div>
+
+            <!-- MEMBER-3 -->
+            <div class="member-card" style="text-align:center; opacity:0; transform:translateY(30px); transition:all 0.6s ease;">
+                <div style="position:relative; display:inline-block; overflow:hidden; border-radius:5px; max-width:250px;"
+                     onmouseover="this.querySelector('.overlay').style.height='50px'"
+                     onmouseout="this.querySelector('.overlay').style.height='0'">
+                    <img src="~/person_3.jpg.webp" alt="Will Turner" style="width:100%; display:block;">
+                    <div class="overlay" style="position:absolute; bottom:0; left:0; right:0; background-color:rgba(0,123,255,0.9); height:0; overflow:hidden; display:flex; justify-content:center; align-items:center; gap:20px; transition:height 0.3s ease;">
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">📘</a>
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">🐦</a>
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">📸</a>
+                    </div>
+                </div>
+                <h3 style="margin:15px 0 5px; font-size:1.1rem;">Will Turner</h3>
+                <span style="display:block; font-size:0.9rem; color:#007bff; margin-bottom:10px;">Marketing</span>
+                <p style="font-size:0.85rem; color:#666; text-align:left; max-width:250px; margin:0 auto;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum excepturi corporis qui doloribus perspiciatis ipsa modi accusantium repellat.
+                </p>
+            </div>
+
+            <!-- MEMBER-4 -->
+            <div class="member-card" style="text-align:center; opacity:0; transform:translateY(30px); transition:all 0.6s ease;">
+                <div style="position:relative; display:inline-block; overflow:hidden; border-radius:5px; max-width:250px;"
+                     onmouseover="this.querySelector('.overlay').style.height='50px'"
+                     onmouseout="this.querySelector('.overlay').style.height='0'">
+                    <img src="~/person_4.jpg (1).webp" alt="Will Turner" style="width:100%; display:block;">
+                    <div class="overlay" style="position:absolute; bottom:0; left:0; right:0; background-color:rgba(0,123,255,0.9); height:0; overflow:hidden; display:flex; justify-content:center; align-items:center; gap:20px; transition:height 0.3s ease;">
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">📘</a>
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">🐦</a>
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">📸</a>
+                    </div>
+                </div>
+                <h3 style="margin:15px 0 5px; font-size:1.1rem;">Will Turner</h3>
+                <span style="display:block; font-size:0.9rem; color:#007bff; margin-bottom:10px;">Marketing</span>
+                <p style="font-size:0.85rem; color:#666; text-align:left; max-width:250px; margin:0 auto;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum excepturi corporis qui doloribus perspiciatis ipsa modi accusantium repellat.
+                </p>
+            </div>
+
+            <!-- MEMBER-5 -->
+            <div class="member-card" style="text-align:center; opacity:0; transform:translateY(30px); transition:all 0.6s ease;">
+                <div style="position:relative; display:inline-block; overflow:hidden; border-radius:5px; max-width:250px;"
+                     onmouseover="this.querySelector('.overlay').style.height='50px'"
+                     onmouseout="this.querySelector('.overlay').style.height='0'">
+                    <img src="~/person_5.jpg.webp" alt="Will Turner" style="width:100%; display:block;">
+                    <div class="overlay" style="position:absolute; bottom:0; left:0; right:0; background-color:rgba(0,123,255,0.9); height:0; overflow:hidden; display:flex; justify-content:center; align-items:center; gap:20px; transition:height 0.3s ease;">
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">📘</a>
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">🐦</a>
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">📸</a>
+                    </div>
+                </div>
+                <h3 style="margin:15px 0 5px; font-size:1.1rem;">Will Turner</h3>
+                <span style="display:block; font-size:0.9rem; color:#007bff; margin-bottom:10px;">Marketing</span>
+                <p style="font-size:0.85rem; color:#666; text-align:left; max-width:250px; margin:0 auto;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum excepturi corporis qui doloribus perspiciatis ipsa modi accusantium repellat.
+                </p>
+            </div>
+
+            <!-- MEMBER-6 -->
+            <div class="member-card" style="text-align:center; opacity:0; transform:translateY(30px); transition:all 0.6s ease;">
+                <div style="position:relative; display:inline-block; overflow:hidden; border-radius:5px; max-width:250px;"
+                     onmouseover="this.querySelector('.overlay').style.height='50px'"
+                     onmouseout="this.querySelector('.overlay').style.height='0'">
+                    <img src="~/person_6.jpg.webp" alt="Will Turner" style="width:100%; display:block;">
+                    <div class="overlay" style="position:absolute; bottom:0; left:0; right:0; background-color:rgba(0,123,255,0.9); height:0; overflow:hidden; display:flex; justify-content:center; align-items:center; gap:20px; transition:height 0.3s ease;">
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">📘</a>
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">🐦</a>
+                        <a href="#" style="color:white; font-size:24px; text-decoration:none;">📸</a>
+                    </div>
+                </div>
+                <h3 style="margin:15px 0 5px; font-size:1.1rem;">Will Turner</h3>
+                <span style="display:block; font-size:0.9rem; color:#007bff; margin-bottom:10px;">Marketing</span>
+                <p style="font-size:0.85rem; color:#666; text-align:left; max-width:250px; margin:0 auto;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum excepturi corporis qui doloribus perspiciatis ipsa modi accusantium repellat.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" style="text-align:center; padding:60px 20px; background-color:#f7f7f7; font-family:Arial, sans-serif; margin:0;">
+        <h2 style="font-size:2rem; margin-bottom:30px;">Testimonials</h2>
+
+        <div style="position:relative; max-width:700px; margin:0 auto; height:250px; overflow:hidden;">
+            <div class="testimonial" style="position:absolute; top:0; left:0; width:100%; opacity:1; transform:translateX(0); transition:transform 1s ease, opacity 2.5s ease;">
+                <img src="~/person_4.jpg (2).webp" alt="Roger Spears" style="width:80px; height:80px; border-radius:50%; object-fit:cover; margin-bottom:20px;">
+                <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit...”</p>
+                <strong>Roger Spears</strong>
+            </div>
+
+            <div class="testimonial" style="position:absolute; top:0; left:0; width:100%; opacity:0; transform:translateX(100%); transition:transform 1s ease, opacity 2.5s ease;">
+                <img src="~/person_1.jpg (2).webp" alt="Anna Smith" style="width:80px; height:80px; border-radius:50%; object-fit:cover; margin-bottom:20px;">
+                <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit...”</p>
+                <strong>Anna Smith</strong>
+            </div>
+
+            <div class="testimonial" style="position:absolute; top:0; left:0; width:100%; opacity:0; transform:translateX(100%); transition:transform 1s ease, opacity 2.5s ease;">
+                <img src="~/person_3.jpg (1).webp" alt="Michael Brown" style="width:80px; height:80px; border-radius:50%; object-fit:cover; margin-bottom:20px;">
+                <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit...”</p>
+                <strong>Michael Brown</strong>
+            </div>
+
+            <div class="testimonial" style="position:absolute; top:0; left:0; width:100%; opacity:0; transform:translateX(100%); transition:transform 1s ease, opacity 2.5s ease;">
+                <img src="~/person_2.jpg (1).webp" alt="Lisa Johnson" style="width:80px; height:80px; border-radius:50%; object-fit:cover; margin-bottom:20px;">
+                <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit...”</p>
+                <strong>Lisa Johnson</strong>
+            </div>
+        </div>
+
+        <div style="margin-top:15px;">
+            <span style="height:10px; width:10px; margin:0 5px; background-color:#007bff; border-radius:50%; display:inline-block; cursor:pointer;"></span>
+            <span style="height:10px; width:10px; margin:0 5px; background-color:#ccc; border-radius:50%; display:inline-block; cursor:pointer;"></span>
+            <span style="height:10px; width:10px; margin:0 5px; background-color:#ccc; border-radius:50%; display:inline-block; cursor:pointer;"></span>
+            <span style="height:10px; width:10px; margin:0 5px; background-color:#ccc; border-radius:50%; display:inline-block; cursor:pointer;"></span>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" style="padding: 60px 0; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 40px;">Blog Posts</h2>
+            <div class="blog-grid" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+
+                <!-- Blog Card 1 -->
+                <div class="blog-card" style="flex: 1 1 300px; max-width: 350px; text-align: left;">
+                    <img src="~/img_1.jpg.webp" alt="Blog Image" style="width: 100%; height: auto; border-radius: 5px;">
+                    <h3 style="margin-top: 15px;">Make Your Business More Profitable</h3>
+                    <p style="color:lightgrey; font-size: 0.9rem;">
+                        Ham Brook &nbsp;•&nbsp; Jan 18, 2019 &nbsp;•&nbsp; <a href="#" style="color: blue;">News</a>
+                    </p>
+                    <p style="font-size: 0.95rem; color: gray">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.
+                    </p>
+                    <a href="#" style="color: blue;">Continue Reading...</a>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="blog-card" style="flex: 1 1 300px; max-width: 350px; text-align: left;">
+                    <img src="~/img_2.jpg.webp" alt="Blog Image" style="width: 100%; height: auto; border-radius: 5px;">
+                    <h3 style="margin-top: 15px;">Make Your Business More Profitable</h3>
+                    <p style="color: lightgrey; font-size: 0.9rem;">
+                        James Phelps &nbsp;•&nbsp; Jan 18, 2019 &nbsp;•&nbsp; <a href="#" style="color: blue;">News</a>
+                    </p>
+                    <p style="font-size: 0.95rem; color: gray;">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.
+                    </p>
+                    <a href="#" style="color: blue;">Continue Reading...</a>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="blog-card" style="flex: 1 1 300px; max-width: 350px; text-align: left;">
+                    <img src="~/img_3.jpg.webp" alt="Blog Image" style="width: 100%; height: auto; border-radius: 5px;">
+                    <h3 style="margin-top: 15px;">Make Your Business More Profitable</h3>
+                    <p style="color: lightgrey; font-size: 0.9rem;">
+                        James Phelps &nbsp;•&nbsp; Jan 18, 2019 &nbsp;•&nbsp; <a href="#" style="color: blue;">News</a>
+                    </p>
+                    <p style="font-size: 0.95rem; color: gray;">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.
+                    </p>
+                    <a href="#" style="color: blue;">Continue Reading...</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" style="background: linear-gradient(rgba(0, 123, 255, 0.4), rgba(0, 200, 255, 0.4)), url('070cf4a6-0f23-4fef-a6e9-6d831057dad9.webp') center/cover no-repeat; padding: 60px 20px; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; font-family: Arial, sans-serif; margin:0;">
+
+        <h2 style="color: white; font-size: 1.8rem; margin-bottom: 30px;">Contact Us</h2>
+
+        <form style="background: white; padding: 30px; border-radius: 4px; max-width: 400px; width: 100%; box-shadow: 0px 5px 15px rgba(0,0,0,0.1); text-align: left;">
+
+            <h3 style="margin-bottom: 20px; font-size: 1.2rem; color: #333;">Contact Form</h3>
+
+            <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                <input type="text" placeholder="First Name"
+                       style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.95rem;">
+                <input type="text" placeholder="Last Name"
+                       style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.95rem;">
+            </div>
+
+            <input type="email" placeholder="Email"
+                   style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.95rem;">
+
+            <input type="text" placeholder="Subject"
+                   style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.95rem;">
+
+            <textarea placeholder="Leave your message here..."
+                      style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 3px; font-size: 0.95rem; resize: vertical; min-height: 100px;"></textarea>
+
+            <button type="submit"
+                    style="background: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 20px; cursor: pointer; font-size: 0.95rem; transition: background 0.3s;"
+                    onmouseover="this.style.background='#0056b3'"
+                    onmouseout="this.style.background='#007bff'">
+                Send Message
+            </button>
+        </form>
+    </section>
+
+    <!-- Foter -->
+    <footer style="background:white;padding:40px 20px;text-align:center;border-top:1px solid #eaeaea;">
+
+        <!-- Social Links -->
+        <div style="margin-bottom:20px;">
+            <a href="#" style="color:#007bff;margin:0 10px;font-size:1.2rem;text-decoration:none;transition:color 0.3s ease;"
+               onmouseover="this.style.color='#0056b3';" onmouseout="this.style.color='#007bff';">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" style="color:#007bff;margin:0 10px;font-size:1.2rem;text-decoration:none;transition:color 0.3s ease;"
+               onmouseover="this.style.color='#0056b3';" onmouseout="this.style.color='#007bff';">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" style="color:#007bff;margin:0 10px;font-size:1.2rem;text-decoration:none;transition:color 0.3s ease;"
+               onmouseover="this.style.color='#0056b3';" onmouseout="this.style.color='#007bff';">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" style="color:#007bff;margin:0 10px;font-size:1.2rem;text-decoration:none;transition:color 0.3s ease;"
+               onmouseover="this.style.color='#0056b3';" onmouseout="this.style.color='#007bff';">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" style="color:#007bff;margin:0 10px;font-size:1.2rem;text-decoration:none;transition:color 0.3s ease;"
+               onmouseover="this.style.color='#0056b3';" onmouseout="this.style.color='#007bff';">
+                <i class="fab fa-pinterest-p"></i>
+            </a>
+        </div>
+
+        <!-- Footer Text -->
+        <div style="font-size:0.9rem;color:#666;">
+            Copyright &copy;2025 All rights reserved | This template is made with
+            <span style="color:red;">&#10084;</span> by
+            <a href="#" style="color:#007bff;text-decoration:none;"
+               onmouseover="this.style.textDecoration='underline';"
+               onmouseout="this.style.textDecoration='none';">Colorlib</a>
+        </div>
+
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    <!-- Responsive Hero Section Styling -->
+    <script>
+        function applyResponsiveStyles() {
+          if (window.innerWidth <= 768) {
+            const hero = document.querySelector('section');
+            hero.style.flexDirection = 'column';
+            hero.style.textAlign = 'center';
+            document.querySelector('img').style.marginTop = '30px';
+          } else {
+            const hero = document.querySelector('section');
+            hero.style.flexDirection = 'row';
+            hero.style.textAlign = 'left';
+            document.querySelector('img').style.marginTop = '0';
+          }
+        }
+        window.addEventListener('resize', applyResponsiveStyles);
+        window.addEventListener('load', applyResponsiveStyles);
+    </script>
+
+    <!-- Features Scroll Animation Script -->
+    <script>
+        function animateOnScroll() {
+            const heading = document.getElementById("features-heading");
+            const text = document.getElementById("features-text");
+            const cards = document.querySelectorAll(".feature-card");
+
+            const windowHeight = window.innerHeight;
+
+            function checkElement(el) {
+                const rect = el.getBoundingClientRect();
+                return rect.top < windowHeight - 50 && rect.bottom > 50;
+            }
+
+            // Animate heading
+            if (checkElement(heading)) {
+                heading.style.opacity = "1";
+                heading.style.transform = "translateY(0)";
+            } else {
+                heading.style.opacity = "0";
+                heading.style.transform = "translateY(50px)";
+            }
+
+            // Animate paragraph
+            if (checkElement(text)) {
+                text.style.opacity = "1";
+                text.style.transform = "translateY(0)";
+            } else {
+                text.style.opacity = "0";
+                text.style.transform = "translateY(50px)";
+            }
+
+            // Animate cards
+            cards.forEach(card => {
+                if (checkElement(card)) {
+                    card.style.opacity = "1";
+                    card.style.transform = "translateY(0)";
+                } else {
+                    card.style.opacity = "0";
+                    card.style.transform = "translateY(50px)";
+                }
+            });
+        }
+
+        window.addEventListener("scroll", animateOnScroll);
+        window.addEventListener("load", animateOnScroll);
+    </script>
+
+    <!-- About Us Scroll Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const img = document.getElementById("about-img");
+
+            function checkScroll(){
+                const rect = img.getBoundingClientRect();
+                const inView = rect.top < window.innerHeight - 100 && rect.bottom > 0;
+
+                if(inView){
+                    img.style.opacity = "1";
+                    img.style.transform = "translateX(0)";
+                } else {
+                    img.style.opacity = "0";
+                    img.style.transform = "translateX(-100px)";
+                }
+            }
+
+            window.addEventListener("scroll", checkScroll);
+            checkScroll(); // run once in case it's already in view
+        });
+    </script>
+
+    <!-- Team Section Scroll Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = Array.from(document.querySelectorAll(".member-card"));
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    const el = entry.target;
+                    const idx = cards.indexOf(el);
+                    const delay = idx * 120; // stagger delay (ms) — adjust as you like
+
+                    // clear any pending timer for this element
+                    if (el._animTimer) {
+                        clearTimeout(el._animTimer);
+                        el._animTimer = null;
+                    }
+
+                    if (entry.isIntersecting) {
+                        // animate in with a small stagger
+                        el._animTimer = setTimeout(() => {
+                            el.style.opacity = "1";
+                            el.style.transform = "translateY(0)";
+                            el._animTimer = null;
+                        }, delay);
+                    } else {
+                        // reset so it can animate again next time
+                        // cancel pending animation and immediately reset
+                        el.style.opacity = "0";
+                        el.style.transform = "translateY(30px)";
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            // observe every card
+            cards.forEach(card => {
+                // ensure initial hidden state (in case markup changed)
+                card.style.opacity = card.style.opacity || "0";
+                card.style.transform = card.style.transform || "translateY(30px)";
+                card.style.transition = card.style.transition || "all 0.6s ease";
+                observer.observe(card);
+            });
+        });
+    </script>
+
+    <!-- Testimonial Slider Script -->
+    <script>
+        let currentIndex = 0;
+        const testimonials = document.querySelectorAll(".testimonial");
+        const dots = document.querySelectorAll('section div[style*="margin-top:15px"] span');
+
+        function showTestimonial(nextIndex) {
+            if (nextIndex === currentIndex) return;
+
+            const current = testimonials[currentIndex];
+            const next = testimonials[nextIndex];
+
+            // Slide current out left
+            current.style.transform = "translateX(-100%)";
+            current.style.opacity = "0";
+
+            // Slide next in from right
+            next.style.transform = "translateX(0)";
+            next.style.opacity = "1";
+
+            // Reset all others to right for next cycle
+            testimonials.forEach((t, i) => {
+                if (i !== currentIndex && i !== nextIndex) {
+                    t.style.transform = "translateX(100%)";
+                    t.style.opacity = "0";
+                }
+            });
+
+            // Update dots
+            dots.forEach((dot, i) => {
+                dot.style.backgroundColor = i === nextIndex ? "#007bff" : "#ccc";
+            });
+
+            currentIndex = nextIndex;
+        }
+
+        function nextTestimonial() {
+            let nextIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(nextIndex);
+        }
+
+        let autoSlide = setInterval(nextTestimonial, 3000);
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                clearInterval(autoSlide);
+                showTestimonial(index);
+                autoSlide = setInterval(nextTestimonial, 3000);
+            });
+        });
+    </script>
+
+    <!-- Scroll Animation for Feedback Images -->
+    <script>
+        function handleScrollAnimation(imgId, direction) {
+            let img = document.getElementById(imgId);
+            let rect = img.getBoundingClientRect();
+
+            if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
+                // Image in viewport
+                img.style.transform = "translateX(0)";
+                img.style.opacity = "1";
+            } else {
+                // Reset when out of viewport
+                if (direction === "left") {
+                    img.style.transform = "translateX(-100px)";
+                } else {
+                    img.style.transform = "translateX(100px)";
+                }
+                img.style.opacity = "0";
+            }
+        }
+
+        window.addEventListener('scroll', function () {
+            handleScrollAnimation("feedback-img-1", "left");
+            handleScrollAnimation("feedback-img-2", "right");
+        });
+
+        // Trigger once at start
+        window.dispatchEvent(new Event('scroll'));
+    </script>
+
+    <!-- Dropdown Menu Show/Hide -->
+    <script>
+        function showDropdown(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+        function hideDropdown(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
